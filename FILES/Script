@@ -1,0 +1,8 @@
+show
+info
+print_ascending
+print_field_ascending_distance
+sum_of_distance
+remove_by_id 1
+execute_script FILES/scriptforscript FILES/Data
+remove_greater 4
