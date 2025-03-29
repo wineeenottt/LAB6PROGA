@@ -7,15 +7,11 @@ import org.wineeenottt.Utility.RouteFieldValidation;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
-/**
- * Класс RemoveGreaterCommand реализует интерфейс CommandWithArguments и представляет команду,
- * которая удаляет из коллекции все элементы, ID которых превышает заданный.
- */
 public class RemoveGreaterCommand extends Command {
+    private static final String FILE = "FILES/RouteStorage";
 
     /**
      * Поле, хранящее ссылку на объект класса CollectionManager.
-     * Используется для управления коллекцией и удаления элементов.
      */
     private CollectionManager collectionManager;
 
@@ -25,16 +21,13 @@ public class RemoveGreaterCommand extends Command {
     }
     /**
      * Конструктор класса RemoveGreaterCommand.
-     *
-     * @param collectionManager объект класса CollectionManager, используемый для управления коллекцией.
      */
     public RemoveGreaterCommand(CollectionManager collectionManager) {
         this.collectionManager = collectionManager;
     }
 
     /**
-     * Метод, выполняющий команду. Удаляет из коллекции все элементы, ID которых превышает заданный.
-     * В случае ошибки (например, если аргумент не указан или имеет неверный формат) выводит соответствующее сообщение.
+     * Метод, выполняющий команду.
      */
     @Override
     public void execute(String[] arguments, InvocationStatus invocationStatus, PrintStream printStream) throws CannotExecuteCommandException {
@@ -50,6 +43,7 @@ public class RemoveGreaterCommand extends Command {
             Integer id = (Integer) this.getResult().get(0);
             if (collectionManager.containsIdRoute(id)){
                 collectionManager.removeGreater(id);
+                collectionManager.save(FILE);
                 printStream.println("Элементы с id > " + id + " удалены");
             }else printStream.println("Элемента с указанным id не существует");
         }
@@ -58,9 +52,6 @@ public class RemoveGreaterCommand extends Command {
 
     /**
      * Метод, возвращающий описание команды.
-     *
-     * @return строка с описанием команды, указывающая, что команда удаляет из коллекции все элементы,
-     * ID которых превышает заданный.
      */
     @Override
     public String getDescription() {

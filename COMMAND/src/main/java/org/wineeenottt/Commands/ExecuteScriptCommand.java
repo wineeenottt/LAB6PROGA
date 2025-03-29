@@ -44,8 +44,6 @@ public class ExecuteScriptCommand extends Command {
             try {
                 CommandInvoker commandInvoker;
                 Scanner scanner;
-
-                // Режим выполнения скрипта из файла
                 if (arguments.length == 2) {
                     scriptPath = arguments[0].trim();
                     if (script.scriptPaths.contains(scriptPath)) {
@@ -68,13 +66,12 @@ public class ExecuteScriptCommand extends Command {
                     InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
                     scanner = new Scanner(inputStreamReader);
                     userIO = new UserIO(scanner);
-                    routeFieldsReader.setInputData(dataPath); // Устанавливаем файл данных
+                    routeFieldsReader.setInputData(dataPath);
                     commandInvoker = new CommandInvoker(userIO, routeFieldsReader, script);
 
                     super.result.add(scriptPath);
                     PrintStream nullStream = new PrintStream(new OutputStream() {
                         public void write(int b) {
-                            // Молчаливое выполнение
                         }
                     });
 
@@ -89,14 +86,13 @@ public class ExecuteScriptCommand extends Command {
                     scanner.close();
                     script.removeScript(scriptPath);
                 }
-                // Режим консольного ввода
                 else {
                     if (arguments.length > 0) {
                         printStream.println("Ожидается либо 0 аргументов (консольный режим), либо 2 (файл скрипта и файл данных)");
                         throw new IllegalArgumentException();
                     }
 
-                    scanner = new Scanner(System.in); // Используем консольный ввод
+                    scanner = new Scanner(System.in);
                     userIO = new UserIO(scanner);
                     commandInvoker = new CommandInvoker(userIO, routeFieldsReader, script);
 
@@ -105,7 +101,7 @@ public class ExecuteScriptCommand extends Command {
                         String commandLine = scanner.nextLine().trim();
                         if (!commandLine.isEmpty()) {
                             if (commandLine.equalsIgnoreCase("exit")) {
-                                break; // Выход из консольного режима
+                                break;
                             }
                             if (commandInvoker.executeClient(commandLine, printStream)) {
                                 super.result.add(commandInvoker.getLastCommandContainer());

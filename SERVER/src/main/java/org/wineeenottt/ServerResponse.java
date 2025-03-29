@@ -8,22 +8,27 @@ import java.io.*;
 import java.net.Socket;
 
 /**
- * Класс {@code ServerSend} отвечает за отправку данных клиенту через сокет.
- * Он сериализует объекты {@link CommandContainer} и отправляет их клиенту
- * с использованием {@link DataOutputStream}.
+ * Класс ServerResponse отвечает за отправку данных клиенту через сокет.
+ * Он сериализует объекты CommandContainer и отправляет их клиенту.
  */
-public class ServerSend {
-    private static final Logger rootLogger = LoggerFactory.getLogger(ServerSend.class);
+public class ServerResponse {
+    /**
+     * Логгер для записи.
+     */
+    private static final Logger rootLogger = LoggerFactory.getLogger(ServerResponse.class);
+    /**
+     * Канал для связи с клиентом.
+     */
     private final Socket clientSocket;
+    /**
+     * Поток вывода для отправки данных клиенту.
+     */
     private final DataOutputStream dataOutputStream;
 
     /**
-     * Конструктор класса {@code ServerSend}.
-     *
-     * @param clientSocket сокет, подключенный к клиенту, через который будет осуществляться отправка данных.
-     * @throws IOException если произошла ошибка при создании потока вывода.
+     * Конструктор класса ServerResponse.
      */
-    public ServerSend(Socket clientSocket) throws IOException {
+    public ServerResponse(Socket clientSocket) throws IOException {
         this.clientSocket = clientSocket;
         try {
             this.dataOutputStream = new DataOutputStream(clientSocket.getOutputStream());
@@ -37,26 +42,25 @@ public class ServerSend {
     /**
      * Отправляет объект клиенту.
      * Объект сериализуется и отправляется.
-     *
-     * @param command объект, который необходимо отправить клиенту.
      */
     public void sendCommandContainer(CommandContainer command) {
         try {
+            //проверяем активность соединения
             if (clientSocket == null || clientSocket.isClosed()) {
                 rootLogger.error("Нет активного соединения с клиентом");
                 return;
             }
 
             ByteArrayOutputStream b = new ByteArrayOutputStream(); //буфер для записи данных в массив байтов
-            try (ObjectOutputStream o = new ObjectOutputStream(b)) { //поток
+            try (ObjectOutputStream o = new ObjectOutputStream(b)) { //объект сериализации
                 o.writeObject(command); // сериализуем
-                o.flush(); //все данные записаны
+                o.flush();
             }
             byte[] serializedData = b.toByteArray(); //получаем массив байтов (сериализуемый объект)
 
             dataOutputStream.writeInt(serializedData.length);
             dataOutputStream.write(serializedData);
-            dataOutputStream.flush(); //все отправили
+            dataOutputStream.flush();
 
             rootLogger.info("CommandContainer успешно отправлен клиенту: {}", command.toString());
 

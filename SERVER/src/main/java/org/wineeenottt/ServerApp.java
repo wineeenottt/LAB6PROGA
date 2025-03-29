@@ -19,13 +19,13 @@ import java.util.*;
 public class ServerApp {
     private CollectionManager collectionManager;
     private FileManager fileManager;
-    private UserIO userIO;
+   // private UserIO userIO;
     private CommandInvoker commandInvoker;
     private ServerConnection serverConnection;
     private ServerSocket serverSocket;
     private boolean isConnected;
 
-    private static final Logger rootLogger = (Logger) LoggerFactory.getLogger(ServerApp.class);
+    private static final Logger rootLogger = LoggerFactory.getLogger(ServerApp.class);
 
     public ServerApp() {
         fileManager = new FileManager();
@@ -37,59 +37,34 @@ public class ServerApp {
             }
         } catch (IOException e) {
             initialRoutes = new HashSet<>();
-            rootLogger.error("Ошибка при загрузке файла: {}. Используется пустая коллекция", e.getMessage());
+            rootLogger.error("Ошибка при загрузке файла: {}.", e.getMessage());
         }
         collectionManager = new CollectionManager(initialRoutes);
-        userIO = new UserIO();
+        //userIO = new UserIO();
     }
     public void start(String inputFile) throws IOException {
         try {
-
             File ioFile = new File(inputFile);
             if (!ioFile.canWrite() || ioFile.isDirectory() || !ioFile.isFile()) {
                 throw new IOException("Недоступен файл для записи или это не файл: " + inputFile);
             }
 
-//            Set<Route> routes = fileManager.parseCsvFile(inputFile);
-//            for (Route route : routes) {
-//                collectionManager.addWithName(route.getId(), route, System.out);
-//            }
-
             this.commandInvoker = new CommandInvoker(collectionManager, inputFile);
             rootLogger.info("Элементы коллекции из файла {} были загружены.", inputFile);
 
-            // Настройка подключения
-//            Scanner scanner = new Scanner(System.in);
-//            int port;
-//            do {
-//                System.out.print("Введите порт: ");
-//                port = scanner.nextInt();
-//                if (port <= 0) {
-//                    rootLogger.error("Введенный порт невалиден.");
-//                } else {
-//                    serverConnection = new ServerConnection(port);
-//                    serverSocket = serverConnection.getServerSocketChannel();
-//                    isConnected = true;
-//                }
-//            } while (!isConnected);
-            int port = 7777;
-            serverConnection = new ServerConnection(port);
-                    serverSocket = serverConnection.getServerSocketChannel();
-                    isConnected = true;
-
-            rootLogger.info("Порт установлен: {}", port);
+            final int PORT = 7778;
+            serverConnection = new ServerConnection(PORT);
+            serverSocket = serverConnection.getServerSocketChannel();
+            isConnected = true;
+            rootLogger.info("Порт установлен: {}", PORT);
 
             cycle();
 
-        } catch (NoSuchElementException ex) {
-            rootLogger.error("Аварийное завершение работы: {}", ex.getMessage());
-            System.exit(-1);
         } catch (Exception ex) {
             rootLogger.error("Ошибка при запуске сервера: {}", ex.getMessage());
             throw new IOException(ex);
         }
     }
-
     private void cycle() {
         while (isConnected) {
             try {
@@ -107,8 +82,8 @@ public class ServerApp {
 
     private void handleClient(SocketChannel clientChannel) {
         try {
-            ServerReader requestReader = new ServerReader(clientChannel.socket());
-            ServerSend responseSender = new ServerSend(clientChannel.socket());
+            ServerRequest requestReader = new ServerRequest(clientChannel.socket());
+            ServerResponse responseSender = new ServerResponse(clientChannel.socket());
             ServerCommandProcess commandProcessor = new ServerCommandProcess(commandInvoker);
 
             while (clientChannel.isOpen()) {
@@ -135,8 +110,5 @@ public class ServerApp {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-    public CollectionManager getCollectionManager() {
-        return collectionManager;
     }
 }

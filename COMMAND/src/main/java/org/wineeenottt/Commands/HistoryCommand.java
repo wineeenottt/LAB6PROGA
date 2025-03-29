@@ -5,10 +5,6 @@ import org.wineeenottt.Exceptions.CannotExecuteCommandException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
-/**
- * Класс HistoryCommand реализует интерфейс Command и представляет команду вывода истории выполненных команд.
- * Команда выводит список последних 11 выполненных команд.
- */
 public class HistoryCommand extends Command {
 
     /**
@@ -16,21 +12,20 @@ public class HistoryCommand extends Command {
      */
     private ArrayList<String> commandsHistoryList;
 
-    public HistoryCommand(){
+    public HistoryCommand() {
         super("history");
     }
+
     /**
      * Конструктор класса HistoryCommand.
-     *
-     * @param commandsHistoryList список, содержащий историю выполненных команд.
      */
     public HistoryCommand(ArrayList<String> commandsHistoryList) {
+        this();
         this.commandsHistoryList = commandsHistoryList;
     }
 
     /**
-     * Метод, выполняющий команду. Выводит список последних выполненных команд.
-     * Если список пуст, выводится соответствующее сообщение.
+     * Метод, выполняющий команду.
      */
     @Override
     public void execute(String[] arguments, InvocationStatus invocationStatus, PrintStream printStream) throws CannotExecuteCommandException {
@@ -39,18 +34,21 @@ public class HistoryCommand extends Command {
                 throw new CannotExecuteCommandException("У данной команды нет аргументов");
             }
         } else if (invocationStatus.equals(InvocationStatus.SERVER)) {
-            StringBuilder sb=new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.append("History: \n");
-            for(String str: commandsHistoryList)
-                sb.append(str).append("\n");
-            printStream.println(sb);
+            for (String str : commandsHistoryList)
+                if (commandsHistoryList.indexOf(str) != commandsHistoryList.size() - 1) {
+                    sb.append(str).append("\n");
+                } else {
+                    sb.append(str);
+                }
+
+            printStream.print(sb);
         }
     }
 
     /**
      * Метод, возвращающий описание команды.
-     *
-     * @return строка с описанием команды, указывающая, что команда выводит последние 11 выполненных команд.
      */
     @Override
     public String getDescription() {

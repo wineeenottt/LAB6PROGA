@@ -5,10 +5,6 @@ import org.wineeenottt.Exceptions.CannotExecuteCommandException;
 
 import java.io.PrintStream;
 
-/**
- * Класс ShowCommand реализует интерфейс Command и представляет команду,
- * которая отображает подробное содержимое всех элементов коллекции.
- */
 public class ShowCommand extends Command {
 
     /**
@@ -22,16 +18,13 @@ public class ShowCommand extends Command {
     }
     /**
      * Конструктор класса ShowCommand.
-     *
-     * @param collectionManager объект класса CollectionManager, используемый для управления коллекцией.
      */
     public ShowCommand(CollectionManager collectionManager) {
         this.collectionManager = collectionManager;
     }
 
     /**
-     * Метод, выполняющий команду. Отображает подробное содержимое всех элементов коллекции.
-     * Если коллекция пуста, выводится соответствующее сообщение.
+     * Метод, выполняющий команду..
      */
     @Override
     public void execute(String[] arguments, InvocationStatus invocationStatus, PrintStream printStream) throws CannotExecuteCommandException {
@@ -45,8 +38,6 @@ public class ShowCommand extends Command {
     }
     /**
      * Метод, возвращающий описание команды.
-     *
-     * @return строка с описанием команды, указывающая, что команда отображает подробное содержимое всех элементов коллекции.
      */
     @Override
     public String getDescription() {

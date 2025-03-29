@@ -11,10 +11,9 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":COMMAND"))  // Подмодуль COMMAND, если он нужен клиенту
-    implementation("org.slf4j:slf4j-api:1.7.32")
-    implementation("ch.qos.logback:logback-classic:1.4.12")
-    implementation("org.codehaus.janino:janino:3.1.12")  // Добавляем Janino
+    implementation(project(":COMMAND"))
+        implementation ("org.slf4j:slf4j-api:2.0.16")
+        implementation ("ch.qos.logback:logback-classic:1.5.18")
 }
 application {
     mainClass.set("org.wineeenottt.MainClient")

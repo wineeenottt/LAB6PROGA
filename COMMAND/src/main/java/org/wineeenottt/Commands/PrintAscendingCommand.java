@@ -5,15 +5,11 @@ import org.wineeenottt.Exceptions.CannotExecuteCommandException;
 
 import java.io.PrintStream;
 
-/**
- * Класс PrintAscendingCommand реализует интерфейс Command и представляет команду,
- * которая выводит элементы коллекции в порядке возрастания их ID.
- */
+
 public class PrintAscendingCommand extends Command {
 
     /**
      * Поле, хранящее ссылку на объект класса CollectionManager.
-     * Используется для доступа к методам управления коллекцией и сортировки элементов.
      */
     private CollectionManager collectionManager;
 
@@ -22,16 +18,13 @@ public class PrintAscendingCommand extends Command {
     }
     /**
      * Конструктор класса PrintAscendingCommand.
-     *
-     * @param collectionManager объект класса CollectionManager, используемый для управления коллекцией.
      */
     public PrintAscendingCommand(CollectionManager collectionManager) {
         this.collectionManager = collectionManager;
     }
 
     /**
-     * Метод, выполняющий команду. Выводит элементы коллекции в порядке возрастания их ID.
-     * Если коллекция пуста, выводится соответствующее сообщение.
+     * Метод, выполняющий команду.
      */
     @Override
     public void execute(String[] arguments, InvocationStatus invocationStatus, PrintStream printStream) throws CannotExecuteCommandException {
@@ -47,9 +40,6 @@ public class PrintAscendingCommand extends Command {
 
     /**
      * Метод, возвращающий описание команды.
-     *
-     * @return строка с описанием команды, указывающая, что команда выводит элементы коллекции
-     * в порядке возрастания их ID.
      */
     @Override
     public String getDescription() {

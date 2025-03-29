@@ -9,18 +9,16 @@ import java.io.PrintStream;
 
 /**
  * Класс ServerCommandProcess отвечает за обработку и выполнение команд, полученных от клиента.
- * Он использует объект CommandInvoker для выполнения команд и логирует процесс выполнения.
  */
 public class ServerCommandProcess {
-    private final CommandInvoker commandInvoker;
-
+    /**
+     * Логгер для записи.
+     */
     private static final Logger rootLogger = LoggerFactory.getLogger(ServerCommandProcess.class);
+    private final CommandInvoker commandInvoker;
 
     /**
      * Конструктор класса ServerCommandProcess.
-     * Инициализирует объект CommandInvoker, который будет использоваться для выполнения команд.
-     *
-     * @param commandInvoker объект CommandInvoker для выполнения команд
      */
     public ServerCommandProcess(CommandInvoker commandInvoker) {
         this.commandInvoker = commandInvoker;
@@ -28,11 +26,6 @@ public class ServerCommandProcess {
 
     /**
      * Выполняет команду, полученную от клиента.
-     * Метод логирует полученную команду, передает её на выполнение в CommandInvoker
-     * и логирует результат выполнения.
-     *
-     * @param command      объект CommandContainer, содержащий команду и её данные
-     * @param printStream  поток вывода для отправки результатов выполнения команды клиенту
      */
     public void executeCommand(CommandContainer command, PrintStream printStream) {
         rootLogger.info("Получена команда: {}", command.getName());

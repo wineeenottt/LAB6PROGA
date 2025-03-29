@@ -1,0 +1,183 @@
+
+2025-03-29 16:58:34.002 [main] INFO  org.wineeenottt.ServerApp - Элементы коллекции из файла FILES/RouteStorage были загружены.
+2025-03-29 16:58:34.012 [main] INFO  org.wineeenottt.ServerConnection - Сервер запущен на порту: 7778
+2025-03-29 16:58:34.013 [main] INFO  org.wineeenottt.ServerApp - Порт установлен: 7778
+2025-03-29 16:58:44.295 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:52182
+2025-03-29 16:58:44.296 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 16:58:44.296 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 16:59:15.320 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@1f0f1111
+2025-03-29 16:59:15.322 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: execute_script
+2025-03-29 16:59:15.322 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: execute_script
+2025-03-29 16:59:15.339 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда execute_script
+2025-03-29 16:59:15.341 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@9225652
+2025-03-29 17:01:08.473 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: Connection reset
+2025-03-29 17:01:08.477 [main] WARN  org.wineeenottt.ServerApp - Ошибка: Connection reset
+2025-03-29 17:01:13.225 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:52195
+2025-03-29 17:01:13.225 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 17:01:13.225 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 17:01:59.274 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@635eaaf1
+2025-03-29 17:01:59.276 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: execute_script
+2025-03-29 17:01:59.276 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: execute_script
+2025-03-29 17:01:59.282 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда execute_script
+2025-03-29 17:01:59.283 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@1139b2f3
+2025-03-29 17:04:00.620 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: null
+2025-03-29 17:04:00.624 [main] WARN  org.wineeenottt.ServerApp - Ошибка: null
+2025-03-29 17:04:00.625 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:52204
+2025-03-29 17:04:00.626 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 17:04:00.626 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 17:04:00.628 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@636be97c
+2025-03-29 17:04:00.628 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: add
+2025-03-29 17:04:00.628 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: add
+2025-03-29 17:04:00.630 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда add
+2025-03-29 17:04:00.631 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@1817d444
+2025-03-29 17:04:38.046 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@1725dc0f
+2025-03-29 17:04:38.048 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: show
+2025-03-29 17:04:38.049 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: show
+2025-03-29 17:04:38.050 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда show
+2025-03-29 17:04:38.051 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@3911c2a7
+2025-03-29 17:06:26.408 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@41e36e46
+2025-03-29 17:06:26.410 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: show
+2025-03-29 17:06:26.411 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: show
+2025-03-29 17:06:26.413 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда show
+2025-03-29 17:06:26.414 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@15c43bd9
+2025-03-29 17:06:36.681 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: null
+2025-03-29 17:06:36.681 [main] WARN  org.wineeenottt.ServerApp - Ошибка: null
+2025-03-29 17:06:36.681 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:52216
+2025-03-29 17:06:36.682 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 17:06:36.682 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 17:06:36.682 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@2145b572
+2025-03-29 17:06:36.682 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: show
+2025-03-29 17:06:36.682 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: show
+2025-03-29 17:06:36.683 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда show
+2025-03-29 17:06:36.684 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@39529185
+2025-03-29 17:06:36.766 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: null
+2025-03-29 17:06:36.767 [main] WARN  org.wineeenottt.ServerApp - Ошибка: null
+2025-03-29 17:06:36.767 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:52225
+2025-03-29 17:06:36.767 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 17:06:36.767 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 17:06:36.767 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@1cbbffcd
+2025-03-29 17:06:36.767 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: show
+2025-03-29 17:06:36.767 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: show
+2025-03-29 17:06:36.767 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда show
+2025-03-29 17:06:36.768 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@27ce24aa
+2025-03-29 17:10:48.159 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: null
+2025-03-29 17:10:48.164 [main] WARN  org.wineeenottt.ServerApp - Ошибка: null
+2025-03-29 17:10:48.170 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:52362
+2025-03-29 17:10:48.170 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 17:10:48.170 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 17:10:48.171 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@28eaa59a
+2025-03-29 17:10:48.172 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: show
+2025-03-29 17:10:48.172 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: show
+2025-03-29 17:10:48.173 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда show
+2025-03-29 17:10:48.173 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@3427b02d
+2025-03-29 17:10:48.249 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: null
+2025-03-29 17:10:48.249 [main] WARN  org.wineeenottt.ServerApp - Ошибка: null
+2025-03-29 17:10:48.249 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:52375
+2025-03-29 17:10:48.249 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 17:10:48.249 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 17:10:48.249 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@35ef1869
+2025-03-29 17:10:48.249 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: show
+2025-03-29 17:10:48.249 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: show
+2025-03-29 17:10:48.249 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда show
+2025-03-29 17:10:48.250 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@c33b74f
+2025-03-29 17:12:55.659 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: null
+2025-03-29 17:12:55.661 [main] WARN  org.wineeenottt.ServerApp - Ошибка: null
+2025-03-29 17:13:48.131 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:52394
+2025-03-29 17:13:48.132 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 17:13:48.132 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 17:13:53.007 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@708f5957
+2025-03-29 17:13:53.007 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: execute_script
+2025-03-29 17:13:53.007 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: execute_script
+2025-03-29 17:13:53.008 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда execute_script
+2025-03-29 17:13:53.008 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@68999068
+2025-03-29 17:14:47.761 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: null
+2025-03-29 17:14:47.762 [main] WARN  org.wineeenottt.ServerApp - Ошибка: null
+2025-03-29 17:14:52.298 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:52405
+2025-03-29 17:14:52.299 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 17:14:52.299 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 17:14:57.175 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@291ae
+2025-03-29 17:14:57.175 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: execute_script
+2025-03-29 17:14:57.175 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: execute_script
+2025-03-29 17:14:57.176 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда execute_script
+2025-03-29 17:14:57.176 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@61df66b6
+2025-03-29 17:15:28.829 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: null
+2025-03-29 17:15:28.831 [main] WARN  org.wineeenottt.ServerApp - Ошибка: null
+2025-03-29 17:15:31.553 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:52410
+2025-03-29 17:15:31.553 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 17:15:31.553 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 17:15:37.440 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@188715b5
+2025-03-29 17:15:37.440 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: execute_script
+2025-03-29 17:15:37.440 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: execute_script
+2025-03-29 17:15:37.441 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда execute_script
+2025-03-29 17:15:37.441 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@1ea9f6af
+2025-03-29 17:15:58.776 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: null
+2025-03-29 17:15:58.778 [main] WARN  org.wineeenottt.ServerApp - Ошибка: null
+2025-03-29 17:16:00.468 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:52416
+2025-03-29 17:16:00.468 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 17:16:00.468 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 17:16:05.354 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@20deea7f
+2025-03-29 17:16:05.355 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: execute_script
+2025-03-29 17:16:05.355 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: execute_script
+2025-03-29 17:16:05.355 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда execute_script
+2025-03-29 17:16:05.355 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@3835c46
+2025-03-29 17:17:51.573 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: null
+2025-03-29 17:17:51.577 [main] WARN  org.wineeenottt.ServerApp - Ошибка: null
+2025-03-29 17:17:51.578 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:52433
+2025-03-29 17:17:51.578 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 17:17:51.578 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 17:17:51.579 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: null
+2025-03-29 17:17:51.579 [main] WARN  org.wineeenottt.ServerApp - Ошибка: null
+2025-03-29 17:17:51.579 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:52441
+2025-03-29 17:17:51.579 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 17:17:51.579 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 17:17:51.579 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: null
+2025-03-29 17:17:51.579 [main] WARN  org.wineeenottt.ServerApp - Ошибка: null
+2025-03-29 17:35:35.350 [main] INFO  org.wineeenottt.ServerApp - Элементы коллекции из файла FILES/RouteStorage были загружены.
+2025-03-29 17:35:35.360 [main] INFO  org.wineeenottt.ServerConnection - Сервер запущен на порту: 7778
+2025-03-29 17:35:35.361 [main] INFO  org.wineeenottt.ServerApp - Порт установлен: 7778
+2025-03-29 17:35:46.222 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:53742
+2025-03-29 17:35:46.223 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 17:35:46.224 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 17:37:50.729 [main] INFO  org.wineeenottt.ServerApp - Элементы коллекции из файла FILES/RouteStorage были загружены.
+2025-03-29 17:37:50.736 [main] INFO  org.wineeenottt.ServerConnection - Сервер запущен на порту: 7778
+2025-03-29 17:37:50.737 [main] INFO  org.wineeenottt.ServerApp - Порт установлен: 7778
+2025-03-29 17:38:01.594 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:54005
+2025-03-29 17:38:01.595 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 17:38:01.596 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 17:38:23.793 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: null
+2025-03-29 17:38:23.794 [main] WARN  org.wineeenottt.ServerApp - Ошибка: null
+2025-03-29 17:38:25.748 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /127.0.0.1:54061
+2025-03-29 17:38:25.749 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 17:38:25.749 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 17:38:31.627 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@5276e6b0
+2025-03-29 17:38:31.627 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: show
+2025-03-29 17:38:31.627 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: show
+2025-03-29 17:38:31.637 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда show
+2025-03-29 17:38:31.642 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@65466a6a
+2025-03-29 17:43:50.609 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@149e0f5d
+2025-03-29 17:43:50.613 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: show
+2025-03-29 17:43:50.614 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: show
+2025-03-29 17:43:50.621 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда show
+2025-03-29 17:43:50.622 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@1b1473ab
+2025-03-29 17:46:24.266 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@36c88a32
+2025-03-29 17:46:24.269 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: show
+2025-03-29 17:46:24.270 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: show
+2025-03-29 17:46:24.275 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда show
+2025-03-29 17:46:24.277 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@7880cdf3
+2025-03-29 17:53:15.457 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@10e92f8f
+2025-03-29 17:53:15.459 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: show
+2025-03-29 17:53:15.460 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: show
+2025-03-29 17:53:15.462 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда show
+2025-03-29 17:53:15.463 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@7ce3cb8e
+2025-03-29 17:56:15.177 [main] INFO  org.wineeenottt.ServerRequest - Получен CommandContainer от клиента: org.wineeenottt.Commands.CommandContainer@69b2283a
+2025-03-29 17:56:15.180 [main] INFO  org.wineeenottt.ServerApp - Обрабатывается команда: show
+2025-03-29 17:56:15.181 [main] INFO  o.wineeenottt.ServerCommandProcess - Получена команда: show
+2025-03-29 17:56:15.185 [main] INFO  o.wineeenottt.ServerCommandProcess - Была исполнена команда show
+2025-03-29 17:56:15.186 [main] INFO  org.wineeenottt.ServerResponse - CommandContainer успешно отправлен клиенту: org.wineeenottt.Commands.CommandContainer@22a637e7
+2025-03-29 18:07:36.895 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: Connection reset
+2025-03-29 18:07:36.899 [main] WARN  org.wineeenottt.ServerApp - Ошибка: Connection reset
+2025-03-29 18:07:36.900 [main] INFO  org.wineeenottt.ServerApp - Новое подключение от клиента: /1.0.0.0:53613
+2025-03-29 18:07:36.901 [main] INFO  org.wineeenottt.ServerRequest - Поток ввода для клиента инициализирован
+2025-03-29 18:07:36.901 [main] INFO  org.wineeenottt.ServerResponse - Поток вывода для клиента инициализирован
+2025-03-29 18:07:36.901 [main] ERROR org.wineeenottt.ServerRequest - Ошибка при чтении данных от клиента: Connection reset
+2025-03-29 18:07:36.902 [main] WARN  org.wineeenottt.ServerApp - Ошибка: Connection reset

@@ -13,34 +13,25 @@ import java.io.PrintStream;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 
-/**
- * Класс AddIfMaxCommand реализует интерфейс Command и представляет команду добавления нового элемента в коллекцию,
- * если его ID больше максимального ID существующих элементов в коллекции.
- * Команда использует RouteFieldsReader для чтения данных о маршруте и UserIO для взаимодействия с пользователем.
- */
 public class AddIfMaxCommand extends Command {
-
+    private static final String FILE = "FILES/RouteStorage";
     /**
      * Поле, хранящее ссылку на объект класса CollectionManager.
-     * Используется для управления коллекцией и проверки условий добавления элемента.
      */
     private CollectionManager collectionManager;
 
     /**
      * Поле, хранящее ссылку на объект RouteFieldsReader.
-     * Используется для чтения данных о маршруте из указанного потока ввода.
      */
     private  RouteFieldsReader routeFieldsReader;
 
     /**
      * Поле, хранящее ссылку на объект UserIO.
-     * Используется для взаимодействия с пользователем (вывод ошибок и запросов).
      */
     private UserIO userIO;
 
     /**
      * Конструктор класса AddIfMaxCommand.
-     *объект класса UserIO, используемый для взаимодействия с пользователем.
      */
     public AddIfMaxCommand(RouteFieldsReader routeFieldsReader){
         super("add_if_max");
@@ -52,9 +43,7 @@ public class AddIfMaxCommand extends Command {
     }
 
     /**
-     * Метод, выполняющий команду. Проверяет, существует ли элемент с указанным ID,
-     * и добавляет новый элемент в коллекцию, если его ID больше максимального ID существующих элементов.
-     * В случае ошибки (например, если ID уже существует или меньше максимального) выводит соответствующее сообщение.
+     * Метод, выполняющий команду.
      */
             @Override
             public void execute(String[] arguments, InvocationStatus invocationStatus, PrintStream printStream) throws CannotExecuteCommandException {
@@ -63,7 +52,6 @@ public class AddIfMaxCommand extends Command {
                         throw new CannotExecuteCommandException("У данной команды нет аргументов");
                     }
 
-                    // Собираем данные о маршруте на клиенте
                     result = new ArrayList<>();
                     result.add(routeFieldsReader.readInt("ID (Integer > 0): "));
                     result.add(routeFieldsReader.readName());
@@ -87,23 +75,13 @@ public class AddIfMaxCommand extends Command {
                     Long distance = (Long) result.get(6);
 
                     collectionManager.addIfMaxIdRoute(id,name, coordinates, creationDate, fromLocation, toLocation, distance);
+                    collectionManager.save(FILE);
                     printStream.println("Маршрут добавлен");}}
-//            if (id > collectionManager.getMaxId()) {
-//                collectionManager.addIfMaxIdRoute(id,name, coordinates, creationDate, fromLocation, toLocation, distance);
-//                printStream.println("Маршрут добавлен");
-//            } else {
-//                printStream.println("ID должен быть больше максимального существующего ID");
-//            }
-//        } else {
-//            throw new CannotExecuteCommandException("Неизвестный статус выполнения команды");
-//        }
+
 
 
     /**
      * Метод, возвращающий описание команды.
-     *
-     * @return строка с описанием команды, указывающая, что команда добавляет элемент в коллекцию,
-     * если его ID больше максимального ID существующих элементов.
      */
     @Override
     public String getDescription() {

@@ -5,15 +5,11 @@ import org.wineeenottt.Exceptions.CannotExecuteCommandException;
 
 import java.io.PrintStream;
 
-/**
- * Класс ClearCommand реализует интерфейс Command и представляет команду очистки коллекции.
- * Команда удаляет все элементы из коллекции и выводит соответствующее сообщение.
- */
 public class ClearCommand extends Command {
+    private static final String FILE = "FILES/RouteStorage";
 
     /**
      * Поле, хранящее ссылку на объект класса CollectionManager.
-     * Используется для доступа к методам управления коллекцией.
      */
     private CollectionManager collectionManager;
 
@@ -21,8 +17,6 @@ public class ClearCommand extends Command {
         super("clear");}
     /**
      * Конструктор класса ClearCommand.
-     *
-     * @param collectionManager объект класса CollectionManager, используемый для управления коллекцией.
      */
     public ClearCommand(CollectionManager collectionManager) {
         this.collectionManager = collectionManager;
@@ -41,14 +35,13 @@ public class ClearCommand extends Command {
             }
         } else if (invocationStatus.equals(InvocationStatus.SERVER)) {
             collectionManager.clearAllCollection();
-            printStream.println("Коллекция " + collectionManager.getClass().getSimpleName() + "очищена");
+            collectionManager.save(FILE);
+            printStream.println("Коллекция " + collectionManager.getClass().getSimpleName() + " очищена");
         }
     }
 
     /**
      * Метод, возвращающий описание команды.
-     *
-     * @return строка с описанием команды, указывающая, что команда очищает все элементы коллекции.
      */
     @Override
     public String getDescription() {

@@ -12,20 +12,20 @@ import java.nio.channels.SocketChannel;
  * Используется для установки неблокирующего соединения с сервером.
  */
 public class ClientConnection {
+    /**
+     * Логгер для записи.
+     */
     private static final Logger rootLogger = LoggerFactory.getLogger(ClientConnection.class);
     private SocketChannel clientChannel;
 
     /**
      * Устанавливает соединение с сервером по указанному адресу.
-     *
-     * @param inetServerAddress Адрес сервера, к которому нужно подключиться.
-     * @throws IOException Если возникает ошибка ввода-вывода при установке соединения.
      */
     public void connect(InetSocketAddress inetServerAddress) throws IOException {
         try {
-            clientChannel = SocketChannel.open();
-            clientChannel.configureBlocking(false);
-            clientChannel.connect(inetServerAddress);
+            clientChannel = SocketChannel.open();//открываем сокет
+            clientChannel.configureBlocking(false);//неблкирующий режим
+            clientChannel.connect(inetServerAddress);//подключаемся
             while (!clientChannel.finishConnect()) {
                 Thread.sleep(100); // ожидание подключения
             }
@@ -42,8 +42,6 @@ public class ClientConnection {
 
     /**
      * Возвращает канал SocketChannel, используемый для соединения с сервером.
-     *
-     * @return Канал SocketChannel, если соединение установлено, иначе null.
      */
     public SocketChannel getClientChannel() {
         return clientChannel;

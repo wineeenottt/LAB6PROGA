@@ -16,8 +16,6 @@ public class HelpCommand extends Command {
 
     /**
      * Конструктор класса HelpCommand.
-     *
-     * @param commandMap коллекция, содержащая все доступные команды.
      */
     public HelpCommand(HashMap<String, Command> commandMap) {
         super("help");
@@ -25,8 +23,7 @@ public class HelpCommand extends Command {
     }
 
     /**
-     * Метод, выполняющий команду. Выводит описание всех доступных в программе команд.
-     * Для каждой команды выводится её имя и описание.
+     * Метод, выполняющий команду.
      */
     @Override
     public void execute(String[] arguments, InvocationStatus invocationStatus, PrintStream printStream) throws CannotExecuteCommandException {
@@ -36,15 +33,11 @@ public class HelpCommand extends Command {
             } else {
                  commandMap.forEach((key, value) -> System.out.println(key + ": " + value.getDescription()));
             }
-        } else if (invocationStatus.equals(InvocationStatus.SERVER)) {
-            commandMap.forEach((key, value) -> System.out.println(key + ": " + value.getDescription()));
         }
     }
 
     /**
      * Метод, возвращающий описание данной команды.
-     *
-     * @return строка с описанием команды, указывающая, что команда выводит справку по всем командам.
      */
     @Override
     public String getDescription() {

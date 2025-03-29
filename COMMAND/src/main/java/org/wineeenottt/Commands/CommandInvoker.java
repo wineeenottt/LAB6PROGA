@@ -58,7 +58,7 @@ public class CommandInvoker {
     private ArrayList<String> commandsHistoryList = new ArrayList<>();
 
     /**
-     * Конструктор для клиента (основной).
+     * Конструктор для клиента.
      *
      * @param userIO читает данные из указанного потока.
      */
@@ -68,7 +68,7 @@ public class CommandInvoker {
         this.routeFieldsReader = new RouteFieldsReader(userIO);
         this.script = new ExecuteScriptCommand.Script();
         this.putClientCommands();
-        System.out.println("Элементы коллекции для клиента были загружены.");
+       // System.out.println("Элементы коллекции для клиента были загружены.");
     }
 
     /**
@@ -98,7 +98,7 @@ public class CommandInvoker {
         this.inputFile = inputFile;
         this.script = new ExecuteScriptCommand.Script();
         this.putServerCommands();
-        System.out.println("Элементы коллекции для сервера были загружены.");
+       // System.out.println("Элементы коллекции для сервера были загружены.");
     }
 
     /**
@@ -156,10 +156,6 @@ public class CommandInvoker {
 
     /**
      * Метод, выполняющий команду на клиенте.
-     *
-     * @param firstCommandLine строка с названием команды и аргументами.
-     * @param printStream      поток вывода для сообщений.
-     * @return true если команда выполнена, false если нет.
      */
     public boolean executeClient(String firstCommandLine, PrintStream printStream) {
         String[] words = firstCommandLine.trim().split("\\s+");
@@ -174,12 +170,11 @@ public class CommandInvoker {
                 addToCommandsHistory(commandName);
                 return true;
             } else {
-                printStream.println("Команда " + commandName + " не распознана, используйте 'help' для списка команд.");
+                printStream.println("Команда " + commandName + " не распознана.");
                 return false;
             }
         } catch (NullPointerException ex) {
             printStream.println("Ошибка: команда " + commandName + " вызвала NullPointerException.");
-            ex.printStackTrace();
             return false;
         } catch (CannotExecuteCommandException ex) {
             printStream.println("Ошибка выполнения команды " + commandName + ": " + ex.getMessage());
@@ -189,11 +184,6 @@ public class CommandInvoker {
 
     /**
      * Метод, выполняющий команду на сервере.
-     *
-     * @param firstCommandLine имя команды с аргументами.
-     * @param result           результат выполнения команды от клиента.
-     * @param printStream      поток вывода для сообщений.
-     * @return true если команда выполнена, false если нет.
      */
     public boolean executeServer(String firstCommandLine, ArrayList<Object> result, PrintStream printStream) {
         String[] words = firstCommandLine.trim().split("\\s+");
@@ -240,17 +230,5 @@ public class CommandInvoker {
             commandsHistoryList.remove(0);
         }
         commandsHistoryList.add(string);
-    }
-
-    /**
-     * Устанавливает входные данные для команд (например, add).
-     *
-     * @param inputData строка с входными данными.
-     */
-    public void setInputData(String inputData) {
-        this.inputData = inputData;
-        if (routeFieldsReader != null) {
-            routeFieldsReader.setInputData(inputData); // Передаем данные в routeFieldsReader для команды add
-        }
     }
 }

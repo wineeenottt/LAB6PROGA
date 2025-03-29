@@ -5,8 +5,8 @@
             <pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
-    <appender name="MyFile2" class="ch.qos.logback.core.FileAppender">
-        <file>LOGS/Client.log</file>
+    <appender name="MyFile1" class="ch.qos.logback.core.FileAppender">
+        <file>LOGS/Server.log</file>
         <immediateFlush>true</immediateFlush>
         <append>true</append>
         <encoder>
@@ -15,6 +15,6 @@
     </appender>
     <root level="debug">
         <appender-ref ref="Console" />
-        <appender-ref ref="MyFile2" />
+        <appender-ref ref="MyFile1" />
     </root>
 </configuration>

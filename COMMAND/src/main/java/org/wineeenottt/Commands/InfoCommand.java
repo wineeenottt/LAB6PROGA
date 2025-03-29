@@ -9,7 +9,6 @@ public class InfoCommand extends Command {
 
     /**
      * Поле, хранящее ссылку на объект класса CollectionManager.
-     * Используется для получения информации о коллекции.
      */
     private CollectionManager collectionManager;
 
@@ -19,16 +18,13 @@ public class InfoCommand extends Command {
 
     /**
      * Конструктор класса InfoCommand.
-     *
-     * @param collectionManager объект класса CollectionManager, используемый для получения информации о коллекции.
      */
     public InfoCommand(CollectionManager collectionManager) {
         this.collectionManager = collectionManager;
     }
 
     /**
-     * Метод, выполняющий команду. Выводит информацию о коллекции, включая тип коллекции,
-     * дату инициализации, количество элементов и тип элементов коллекции.
+     * Метод, выполняющий команду.
      */
     @Override
     public void execute(String[] arguments, InvocationStatus invocationStatus, PrintStream printStream) throws CannotExecuteCommandException {
@@ -43,8 +39,6 @@ public class InfoCommand extends Command {
 
     /**
      * Метод, возвращающий описание команды.
-     *
-     * @return строка с описанием команды, указывающая, что команда выводит информацию о коллекции.
      */
     @Override
     public String getDescription() {

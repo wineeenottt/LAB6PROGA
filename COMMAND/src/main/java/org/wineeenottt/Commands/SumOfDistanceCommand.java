@@ -5,10 +5,6 @@ import org.wineeenottt.Exceptions.CannotExecuteCommandException;
 
 import java.io.PrintStream;
 
-/**
- * Класс SumOfDistanceCommand реализует интерфейс Command и представляет команду,
- * которая вычисляет и выводит сумму значений поля distance для всех элементов коллекции.
- */
 public class SumOfDistanceCommand extends Command {
 
     /**
@@ -22,16 +18,13 @@ public class SumOfDistanceCommand extends Command {
     }
     /**
      * Конструктор класса SumOfDistanceCommand.
-     *
-     * @param collectionManager объект класса CollectionManager, используемый для управления коллекцией.
      */
     public SumOfDistanceCommand(CollectionManager collectionManager) {
         this.collectionManager = collectionManager;
     }
 
     /**
-     * Метод, выполняющий команду. Вычисляет сумму значений поля distance для всех элементов коллекции
-     * и выводит результат на экран.
+     * Метод, выполняющий команду.
      */
     @Override
     public void execute(String[] arguments, InvocationStatus invocationStatus, PrintStream printStream)
@@ -48,9 +41,6 @@ public class SumOfDistanceCommand extends Command {
 
     /**
      * Метод, возвращающий описание команды.
-     *
-     * @return строка с описанием команды, указывающая, что команда выводит сумму значений поля distance
-     * для всех элементов коллекции.
      */
     @Override
     public String getDescription() {

@@ -9,9 +9,9 @@ import java.util.ArrayList;
 
 public class RemoveByIdCommand extends Command{
 
+    private static final String FILE = "FILES/RouteStorage";
     /**
      * Поле, хранящее ссылку на объект класса CollectionManager.
-     * Используется для управления коллекцией и удаления элемента по ID.
      */
     private CollectionManager collectionManager;
 
@@ -20,16 +20,13 @@ public class RemoveByIdCommand extends Command{
     }
     /**
      * Конструктор класса RemoveByIdCommand.
-     *
-     * @param collectionManager объект класса CollectionManager, используемый для управления коллекцией.
      */
     public RemoveByIdCommand(CollectionManager collectionManager) {
         this.collectionManager = collectionManager;
     }
 
     /**
-     * Метод, выполняющий команду. Удаляет элемент коллекции по указанному ID.
-     * В случае ошибки (например, если аргумент не указан или имеет неверный формат) выводит соответствующее сообщение.
+     * Метод, выполняющий команду.
      */
     @Override
     public void execute(String[] arguments, InvocationStatus invocationEnum, PrintStream printStream) throws CannotExecuteCommandException {
@@ -46,14 +43,13 @@ public class RemoveByIdCommand extends Command{
         } else if (invocationEnum.equals(InvocationStatus.SERVER)) {
             Integer id = (Integer) this.getResult().get(0);
             collectionManager.removeById(id);
+            collectionManager.save(FILE);
             printStream.println("Элементы с id = " + id + " были удалены");
         }
     }
 
     /**
      * Метод, возвращающий описание команды.
-     *
-     * @return строка с описанием команды, указывающая, что команда удаляет элемент с указанным ID.
      */
     @Override
     public String getDescription() {

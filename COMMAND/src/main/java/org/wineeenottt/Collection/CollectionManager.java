@@ -284,7 +284,6 @@ public class CollectionManager {
      * @param value       Новое значение поля.
      * @param printStream
      */
-    //todo: лямбда
     public void update(Integer id, String field, String value,PrintStream printStream) {
         try {
             if (field.equals("stop")) {

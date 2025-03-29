@@ -14,8 +14,6 @@ public class ClientCommandProcess {
 
     /**
      * Создает ClientCommandProcess с указанным CommandInvoker.
-     *
-     * @param commandInvoker инвокер, используемый для выполнения команд
      */
     public ClientCommandProcess(CommandInvoker commandInvoker) {
         this.commandInvoker = commandInvoker;
@@ -23,16 +21,13 @@ public class ClientCommandProcess {
 
     /**
      * Выполняет команду, указанную строкой командной строки.
-     *
-     * @param firstCommandLine строка командной строки для выполнения
-     * @return true, если команда была успешно выполнена и не является командой "help", false в противном случае
      */
     public boolean executeCommand(String firstCommandLine) {
         if (!commandInvoker.executeClient(firstCommandLine, System.out)) {
-            rootLogger.warn("Команда не была исполнена: {}", firstCommandLine);
-            return false;
+            rootLogger.warn("Команда не была исполнена клиентом: {}", firstCommandLine);
+            return true;
         } else {
-            return !commandInvoker.getLastCommandContainer().getName().equals("help");
+            return commandInvoker.getLastCommandContainer().getName().equals("help");
         }
     }
 }

@@ -3,22 +3,30 @@ package org.wineeenottt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Главный класс клиентского приложения.
+ */
 public class MainClient {
-    //логгер
-    private static final Logger rootLogger = (Logger) LoggerFactory.getLogger(MainClient.class);
-    //порт по умолчанию
-    private static final int DEFAULT_PORT = 7777;
+    /**
+     * Логгер для записи.
+     */
+    private static final Logger rootLogger = LoggerFactory.getLogger(MainClient.class);
 
+    /**
+     * Порт, используемый клиентом для подключения к серверу.
+     */
+    private static final int PORT = 7778;
+
+    /**
+     * Точка входа клиентского приложения.
+     */
     public static void main(String[] args) {
         try {
-            //арг ком стр не пусто,то этот порт,иначе по умолчанию
-            int port = args.length > 0 ? Integer.parseInt(args[0]) : DEFAULT_PORT;
-            rootLogger.info("Запуск клиента с портом: {}", port);
-            ClientApp application = new ClientApp(port);
+            rootLogger.info("Запуск клиента с портом: {}", PORT);
+            ClientApp application = new ClientApp(PORT);
             application.start();
-        } catch (NumberFormatException ex) {
-            rootLogger.error("Значение порта должно быть целочисленным. Введено: {}",
-                    args.length > 0 ? args[0] : "null");
+        } catch (Exception ex) {
+            rootLogger.error("Ошибка при запуске клиента: {}", ex.getMessage());
             System.exit(1);
         }
     }

@@ -11,43 +11,47 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 
 /**
- * Класс ClientSend отвечает за отправку объектов CommandContainer на сервер через SocketChannel.
- * Используется для сериализации данных и их передачи по сети.
+ * Класс ClientSend отвечает за отправку объектов CommandContainer на сервер.
  */
-public class ClientSend {
-    private static final Logger rootLogger = LoggerFactory.getLogger(ClientSend.class);
+public class ClientResponse {
+    /**
+     * Логгер для записи.
+     */
+    private static final Logger rootLogger = LoggerFactory.getLogger(ClientResponse.class);
+    /**
+     * Канал для связи с сервером.
+     */
     private final SocketChannel clientChannel;
+    /**
+     * Константа - максимальный размер буфера.
+     */
     private static final int BUFFER_SIZE = 4096;
 
     /**
      * Конструктор класса ClientSend.
-     *
-     * @param clientChannel Канал SocketChannel, используемый для отправки данных на сервер.
      */
-    public ClientSend(SocketChannel clientChannel) {
+    public ClientResponse(SocketChannel clientChannel) {
         this.clientChannel = clientChannel;
     }
 
     /**
      * Отправляет объект CommandContainer на сервер через SocketChannel.
-     * Метод сериализует объект, проверяет его размер и отправляет данные по сети.
-     *
-     * @param command Объект CommandContainer, который необходимо отправить.
-     * @return Возвращает true, если отправка прошла успешно, и false в случае ошибки.
+     * Метод сериализует объект, проверяет его размер и отправляет данные.
      */
     public boolean sendContainer(CommandContainer command) {
         try {
+            //проверяем активность соединения
             if (clientChannel == null || !clientChannel.isConnected()) {
                 rootLogger.error("Нет активного соединения с сервером");
                 return false;
             }
 
             byte[] serializedData;
-            try (ByteArrayOutputStream b = new ByteArrayOutputStream();
-                 ObjectOutputStream oos = new ObjectOutputStream(b)) {
-                oos.writeObject(command);
-                oos.flush();
-                serializedData = b.toByteArray();
+            try (ByteArrayOutputStream b = new ByteArrayOutputStream(); //поток для записи байтов в масссив
+                 ObjectOutputStream o = new ObjectOutputStream(b)) { //объект сериализации
+                o.writeObject(command); //сериализуем
+                o.flush();
+                serializedData = b.toByteArray(); //массив байтов
             }
 
             if (serializedData.length > BUFFER_SIZE) {
@@ -56,14 +60,14 @@ public class ClientSend {
             }
 
             ByteBuffer buffer = ByteBuffer.allocate(BUFFER_SIZE);
-            buffer.clear();
+            buffer.clear();//позиця 0
 
-            buffer.putInt(serializedData.length);
+            buffer.putInt(serializedData.length); //записываем длину
             buffer.put(serializedData);
-            buffer.flip();
+            buffer.flip();//в буфере только нужные данные
 
-            while (buffer.hasRemaining()) {
-                int bytesWritten = clientChannel.write(buffer);
+            while (buffer.hasRemaining()) { //остались ли в буфере данные?
+                int bytesWritten = clientChannel.write(buffer); //запись в канал
                 if (bytesWritten == -1) {
                     rootLogger.error("Канал закрыт при отправке CommandContainer");
                     return false;

@@ -9,7 +9,6 @@ import java.util.Set;
 
 /**
  * Класс для работы с файлами, содержащими данные о маршрутах.
- * Использует BufferedInputStream для чтения данных из CSV-файла.
  */
 public class FileManager {
 
@@ -22,15 +21,13 @@ public class FileManager {
             boolean isFirstLine = true;
             int byteRead;
 
-            // Читаем байты из файла
             while ((byteRead = bis.read()) != -1) {
                 char ch = (char) byteRead;
 
-                // Собираем строку до символа новой строки
                 if (ch == '\n') {
                     if (isFirstLine) {
-                        isFirstLine = false; // Пропускаем заголовок
-                        currentLine.setLength(0); // Очищаем буфер
+                        isFirstLine = false;
+                        currentLine.setLength(0);
                         continue;
                     }
 
@@ -50,14 +47,13 @@ public class FileManager {
                             System.err.println("Ошибка при разборе строки: " + e.getMessage());
                         }
                     }
-                    currentLine.setLength(0); // Очищаем буфер для следующей строки
+                    currentLine.setLength(0);
                 } else {
                     currentLine.append(ch);
                 }
             }
 
-            // Обработка последней строки, если файл не заканчивается \n
-            if (currentLine.length() > 0 && !isFirstLine) {
+            if (!currentLine.isEmpty() && !isFirstLine) {
                 String line = currentLine.toString().trim();
                 if (!line.isEmpty()) {
                     String[] fields = line.split(",");

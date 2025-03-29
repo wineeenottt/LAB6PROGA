@@ -1,7 +1,7 @@
 package org.wineeenottt.Commands;
 
 /**
- * Режим, с которым должна быть запущена команда
+ * Режим команды
  */
 public enum InvocationStatus {
     CLIENT,

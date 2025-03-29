@@ -8,19 +8,10 @@ import org.wineeenottt.Utility.RouteFieldValidation;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.NoSuchElementException;
 
-/**
- * @author Karabanov Andrey
- * @version 1.0
- * @date 22.02.2023 0:44
- */
-
-/**
- * Команда , обновляющая элемент коллекции
- */
 public class UpdateElementCommand extends Command{
+    private static final String FILE = "FILES/RouteStorage";
     /**
      * Поле, хранящее ссылку на объект класса CollectionManager.
      */
@@ -42,23 +33,13 @@ public class UpdateElementCommand extends Command{
     public UpdateElementCommand(CollectionManager collectionManager){
         this.collectionManager=collectionManager;
     }
-    /**
-     * Поле, хранящее массив аргументов команды.
-     */
-    private String[] commandArguments;
-    /**
-     * @param collectionManager Хранит ссылку на созданный в объекте Application объект CollectionManager.
-     * @param userIO            Хранит ссылку на объект класса UserIO.
-     */
-    public UpdateElementCommand(CollectionManager collectionManager,UserIO userIO){
-        this.collectionManager=collectionManager;
-        this.userIO=userIO;
-    }
+
+//    public UpdateElementCommand(CollectionManager collectionManager,UserIO userIO){
+//        this.collectionManager=collectionManager;
+//        this.userIO=userIO;
+//    }
     /**
      * Метод, исполняющий команду. При вызове изменяется указанной элемент коллекции до тех пор, пока не будет передана пустая строка. В случае некорректного ввода высветится ошибка.
-     * @param invocationEnum режим, с которым должна быть исполнена данная команда.
-     * @param printStream поток вывода.
-     * @param arguments аргументы команды.
      */
     @Override
     public void execute(String[] arguments, InvocationStatus invocationEnum, PrintStream printStream) throws CannotExecuteCommandException {
@@ -103,15 +84,16 @@ public class UpdateElementCommand extends Command{
             } catch (NoSuchElementException ex) {
                 throw new CannotExecuteCommandException("Сканнер достиг конца файла.");
             }
-        } else if (invocationEnum.equals(InvocationStatus.SERVER)) { // id - result[0], arguments - result[1] name;value
+        } else if (invocationEnum.equals(InvocationStatus.SERVER)) {
             String[] spArguments = result.toArray(new String[0]);
             Integer id = Integer.parseInt(spArguments[0]);
             if (collectionManager.containsIdRoute(id)) {
                 for (int i = 1; i < spArguments.length; i++) {
                     String[] subStr;
-                    String delimeter = ";"; // Разделитель
+                    String delimeter = ";";
                     subStr = spArguments[i].split(delimeter);
                     collectionManager.update(id, subStr[0], subStr[1], printStream);
+                    collectionManager.save(FILE);
                 }
                 printStream.println("Указанные поля были заменены.");
             } else {
@@ -121,9 +103,6 @@ public class UpdateElementCommand extends Command{
     }
     /**
      * Метод, возвращающий описание команды.
-     *
-     * @return Метод, возвращающий описание команды.
-     * @see Command
      */
     @Override
     public String getDescription() {

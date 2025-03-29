@@ -5,15 +5,11 @@ import org.wineeenottt.Exceptions.CannotExecuteCommandException;
 
 import java.io.PrintStream;
 
-/**
- * Класс PrintFieldAscendingDistanceCommand реализует интерфейс Command и представляет команду,
- * которая выводит значения поля distance всех элементов коллекции в порядке возрастания.
- */
+
 public class PrintFieldAscendingDistanceCommand extends Command {
 
     /**
      * Поле, хранящее ссылку на объект класса CollectionManager.
-     * Используется для доступа к методам управления коллекцией и получения данных о расстояниях.
      */
     private CollectionManager collectionManager;
 
@@ -22,16 +18,13 @@ public class PrintFieldAscendingDistanceCommand extends Command {
     }
     /**
      * Конструктор класса PrintFieldAscendingDistanceCommand.
-     *
-     * @param collectionManager объект класса CollectionManager, используемый для управления коллекцией.
      */
     public PrintFieldAscendingDistanceCommand(CollectionManager collectionManager) {
         this.collectionManager = collectionManager;
     }
 
     /**
-     * Метод, выполняющий команду. Выводит значения поля distance всех элементов коллекции
-     * в порядке возрастания. Если коллекция пуста, выводится соответствующее сообщение.
+     * Метод, выполняющий команду.
      */
     @Override
     public void execute(String[] arguments, InvocationStatus invocationStatus, PrintStream printStream) throws CannotExecuteCommandException {
@@ -47,9 +40,6 @@ public class PrintFieldAscendingDistanceCommand extends Command {
 
     /**
      * Метод, возвращающий описание команды.
-     *
-     * @return строка с описанием команды, указывающая, что команда выводит значения поля distance
-     * всех элементов коллекции в порядке возрастания.
      */
     @Override
     public String getDescription() {
