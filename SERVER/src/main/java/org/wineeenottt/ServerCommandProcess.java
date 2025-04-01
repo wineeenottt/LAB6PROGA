@@ -15,6 +15,7 @@ public class ServerCommandProcess {
      * Логгер для записи.
      */
     private static final Logger rootLogger = LoggerFactory.getLogger(ServerCommandProcess.class);
+
     private final CommandInvoker commandInvoker;
 
     /**

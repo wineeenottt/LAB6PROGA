@@ -1,2 +1,6 @@
 id,name,coordinateX,coordinateY,creationDate,fromX,fromY,fromZ,fromName,toX,toY,toZ,toName,distance
-16,RouteTest,10.0,10.0,2025-03-29T17:03:05.739932+03:00[Europe/Moscow],10.0,10,10.0,d,10.0,10,10.0,10,10
+1,CentralRoute,400.0,80.0,2025-02-27T12:44:20.650883+03:00[Europe/Moscow],59.9500,30,15.0,Admiralteyskaya,59.9340,30,25.0,Vasileostrovskaya,10
+4,VasileostrovskyRoute,450.0,90.0,2025-02-27T12:44:20.650883+03:00[Europe/Moscow],59.9422,30,8.5,Vasileostrovskaya,59.9723,30,18.0,LakhtaCenter,25
+2,MoskovskyRoute,500.0,100.5,2025-02-27T12:44:20.650883+03:00[Europe/Moscow],59.8586,30,20.0,MoskovskyProspekt,59.9311,30,12.5,NevskyProspekt,15
+3,PetrogradskyRoute,300.0,75.5,2025-02-27T12:44:20.650883+03:00[Europe/Moscow],59.9607,30,10.0,Petrogradskaya,60.005,30,30.0,PulkovoAirport,20
+5,PulkovoRoute,600.0,120.5,2025-02-27T12:44:20.650883+03:00[Europe/Moscow],59.8003,30,5.0,PulkovoAirport,59.8586,30,20.0,MoskovskyProspekt,30

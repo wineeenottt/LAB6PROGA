@@ -86,29 +86,6 @@ public class ExecuteScriptCommand extends Command {
                     scanner.close();
                     script.removeScript(scriptPath);
                 }
-                else {
-                    if (arguments.length > 0) {
-                        printStream.println("Ожидается либо 0 аргументов (консольный режим), либо 2 (файл скрипта и файл данных)");
-                        throw new IllegalArgumentException();
-                    }
-
-                    scanner = new Scanner(System.in);
-                    userIO = new UserIO(scanner);
-                    commandInvoker = new CommandInvoker(userIO, routeFieldsReader, script);
-
-                    printStream.println("Введите команды для выполнения (для завершения введите 'exit'):");
-                    while (scanner.hasNext()) {
-                        String commandLine = scanner.nextLine().trim();
-                        if (!commandLine.isEmpty()) {
-                            if (commandLine.equalsIgnoreCase("exit")) {
-                                break;
-                            }
-                            if (commandInvoker.executeClient(commandLine, printStream)) {
-                                super.result.add(commandInvoker.getLastCommandContainer());
-                            }
-                        }
-                    }
-                }
             } catch (FileNotFoundException ex) {
                 printStream.println("Файл скрипта не найден");
                 throw new CannotExecuteCommandException("Ошибка выполнения скрипта: " + ex.getMessage());
@@ -123,11 +100,11 @@ public class ExecuteScriptCommand extends Command {
                 throw new CannotExecuteCommandException("Ошибка выполнения скрипта: " + ex.getMessage());
             } finally {
                 if (arguments.length == 2) {
-                    script.removeScript(scriptPath); // Очистка только для режима файла
+                    script.removeScript(scriptPath);
                 }
             }
         } else if (invocationEnum.equals(InvocationStatus.SERVER)) {
-            printStream.println("Файл или команды, исполняемые скриптом: " + this.getResult().get(0));
+            printStream.println("Команды, исполняемые скриптом: " + this.getResult().get(0));
             Object[] arr = result.toArray();
             arr = Arrays.copyOfRange(arr, 1, arr.length);
             CommandContainer[] containerArray = Arrays.copyOf(arr, arr.length, CommandContainer[].class);

@@ -12,7 +12,7 @@ import java.nio.channels.ServerSocketChannel;
  * Класс ServerConnection отвечает за создание и управление серверным сокетом.
  */
 public class ServerConnection {
-    private static final Logger rootLogger = (Logger) LoggerFactory.getLogger(ServerConnection.class);
+    private static final Logger rootLogger = LoggerFactory.getLogger(ServerConnection.class);
     private final ServerSocketChannel serverSocketChannel;
 
     /**

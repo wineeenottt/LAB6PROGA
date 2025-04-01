@@ -15,7 +15,7 @@ public class ServerRequest {
     /**
      * Логгер для записи.
      */
-    private static final Logger rootLogger = (Logger) LoggerFactory.getLogger(ServerRequest.class);
+    private static final Logger rootLogger = LoggerFactory.getLogger(ServerRequest.class);
     /**
      * Канал для связи с клиентом.
      */

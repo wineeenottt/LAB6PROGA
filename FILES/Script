@@ -13,6 +13,6 @@ update 2
 Name Route2635
 CoordinateX 44
 stop
-execute_script Files/scriptforscript Files/Data
 remove_greater 4
+execute_script FILES/scriptforscript FILES/Data
 clear

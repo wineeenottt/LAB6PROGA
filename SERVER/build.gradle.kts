@@ -26,10 +26,5 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
-tasks.jar {
-    manifest {
-        attributes["Main-Class"] = "org.wineeenottt.MainServer"
-    }
-}
 
 

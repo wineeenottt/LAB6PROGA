@@ -6,7 +6,6 @@ import org.wineeenottt.Collection.CollectionManager;
 import org.wineeenottt.Collection.Route;
 import org.wineeenottt.Commands.CommandContainer;
 import org.wineeenottt.Commands.CommandInvoker;
-import org.wineeenottt.IO.UserIO;
 import org.wineeenottt.WorkWithFile.FileManager;
 
 import java.io.*;
@@ -32,9 +31,6 @@ public class ServerApp {
         Set<Route> initialRoutes;
         try {
             initialRoutes = fileManager.parseCsvFile("FILES/RouteStorage");
-            if (initialRoutes == null) {
-                initialRoutes = new HashSet<>();
-            }
         } catch (IOException e) {
             initialRoutes = new HashSet<>();
             rootLogger.error("Ошибка при загрузке файла: {}.", e.getMessage());
