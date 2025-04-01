@@ -1962,3 +1962,131 @@
 2025-03-29 18:01:37.848 [main] INFO  org.wineeenottt.ClientRequest - Канал ввода для клиента инициализирован
 2025-03-29 18:01:37.848 [main] INFO  org.wineeenottt.ClientApp - Клиент готов к чтению команд.
 2025-03-29 18:01:39.514 [main] ERROR org.wineeenottt.MainClient - Ошибка при запуске клиента: Ввод пустой или поток ввода был закрыт.
+2025-04-01 14:32:48.290 [main] INFO  org.wineeenottt.MainClient - Запуск клиента с портом: 7778
+2025-04-01 14:32:48.300 [main] INFO  org.wineeenottt.ClientApp - Конструктор класса ClientApp был загружен.
+2025-04-01 14:32:48.311 [main] INFO  org.wineeenottt.ClientConnection - Подключение установлено с сервером: localhost/127.0.0.1:7778
+2025-04-01 14:32:48.311 [main] INFO  org.wineeenottt.ClientApp - Подключение установлено с сервером: localhost/127.0.0.1:7778
+2025-04-01 14:32:48.312 [main] INFO  org.wineeenottt.ClientRequest - Канал ввода для клиента инициализирован
+2025-04-01 14:32:48.312 [main] INFO  org.wineeenottt.ClientApp - Клиент готов к чтению команд.
+2025-04-01 14:32:55.178 [main] INFO  org.wineeenottt.ClientResponse - CommandContainer успешно отправлен: org.wineeenottt.Commands.CommandContainer@7fc2413d, размер: 131 байт
+2025-04-01 14:32:55.179 [main] INFO  org.wineeenottt.ClientApp - Данные отправлены: org.wineeenottt.Commands.CommandContainer@7fc2413d
+2025-04-01 14:34:23.519 [main] DEBUG org.wineeenottt.ClientRequest - Получен размер данных: 1580 байт
+2025-04-01 14:34:23.525 [main] DEBUG org.wineeenottt.ClientRequest - Получено 0 из 1580 байт, ждем остальное
+2025-04-01 14:34:23.630 [main] DEBUG org.wineeenottt.ClientRequest - Получено 0 из 1580 байт, ждем остальное
+2025-04-01 14:34:23.736 [main] DEBUG org.wineeenottt.ClientRequest - Получено 0 из 1580 байт, ждем остальное
+2025-04-01 14:34:23.845 [main] DEBUG org.wineeenottt.ClientRequest - Получено 0 из 1580 байт, ждем остальное
+2025-04-01 14:34:23.951 [main] DEBUG org.wineeenottt.ClientRequest - Получено 0 из 1580 байт, ждем остальное
+2025-04-01 14:34:24.054 [main] DEBUG org.wineeenottt.ClientRequest - Получено 0 из 1580 байт, ждем остальное
+2025-04-01 14:34:24.160 [main] DEBUG org.wineeenottt.ClientRequest - Получено 0 из 1580 байт, ждем остальное
+2025-04-01 14:34:24.266 [main] DEBUG org.wineeenottt.ClientRequest - Получено 0 из 1580 байт, ждем остальное
+2025-04-01 14:34:24.372 [main] DEBUG org.wineeenottt.ClientRequest - Получено 1580 из 1580 байт
+2025-04-01 14:34:24.391 [main] INFO  org.wineeenottt.ClientRequest - Получен CommandContainer: org.wineeenottt.Commands.CommandContainer@124c278f, размер: 1580 байт
+2025-04-01 14:34:24.392 [main] INFO  org.wineeenottt.ClientApp - Данные получены: org.wineeenottt.Commands.CommandContainer@124c278f
+2025-04-01 14:34:24.394 [main] ERROR org.wineeenottt.MainClient - Ошибка при запуске клиента: Ввод пустой или поток ввода был закрыт.
+2025-04-01 14:35:49.046 [main] INFO  org.wineeenottt.MainClient - Запуск клиента с портом: 7778
+2025-04-01 14:35:49.055 [main] INFO  org.wineeenottt.ClientApp - Конструктор класса ClientApp был загружен.
+2025-04-01 14:35:49.067 [main] INFO  org.wineeenottt.ClientConnection - Подключение установлено с сервером: localhost/127.0.0.1:7778
+2025-04-01 14:35:49.067 [main] INFO  org.wineeenottt.ClientApp - Подключение установлено с сервером: localhost/127.0.0.1:7778
+2025-04-01 14:35:49.067 [main] INFO  org.wineeenottt.ClientRequest - Канал ввода для клиента инициализирован
+2025-04-01 14:35:49.068 [main] INFO  org.wineeenottt.ClientApp - Клиент готов к чтению команд.
+2025-04-01 14:35:58.957 [main] INFO  org.wineeenottt.ClientResponse - CommandContainer успешно отправлен: org.wineeenottt.Commands.CommandContainer@7fc2413d, размер: 131 байт
+2025-04-01 14:35:58.958 [main] INFO  org.wineeenottt.ClientApp - Данные отправлены: org.wineeenottt.Commands.CommandContainer@7fc2413d
+2025-04-01 14:35:59.064 [main] DEBUG org.wineeenottt.ClientRequest - Получен размер данных: 1580 байт
+2025-04-01 14:35:59.064 [main] DEBUG org.wineeenottt.ClientRequest - Получено 1580 из 1580 байт
+2025-04-01 14:35:59.068 [main] INFO  org.wineeenottt.ClientRequest - Получен CommandContainer: org.wineeenottt.Commands.CommandContainer@124c278f, размер: 1580 байт
+2025-04-01 14:35:59.069 [main] INFO  org.wineeenottt.ClientApp - Данные получены: org.wineeenottt.Commands.CommandContainer@124c278f
+2025-04-01 14:36:33.221 [main] ERROR org.wineeenottt.MainClient - Ошибка при запуске клиента: Ввод пустой или поток ввода был закрыт.
+2025-04-01 14:36:35.057 [main] INFO  org.wineeenottt.MainClient - Запуск клиента с портом: 7778
+2025-04-01 14:36:35.113 [main] INFO  org.wineeenottt.ClientApp - Конструктор класса ClientApp был загружен.
+2025-04-01 14:36:35.150 [main] ERROR org.wineeenottt.ClientConnection - Ошибка при установке соединения: Connection refused
+2025-04-01 14:36:35.150 [main] ERROR org.wineeenottt.ClientApp - Ошибка подключения (попытка 1/5): Connection refused
+2025-04-01 14:36:35.150 [main] WARN  org.wineeenottt.ClientApp - Повторить попытку? (y/n)
+2025-04-01 14:36:55.414 [main] ERROR org.wineeenottt.MainClient - Ошибка при запуске клиента: Ввод пустой или поток ввода был закрыт.
+2025-04-01 14:37:11.315 [main] INFO  org.wineeenottt.MainClient - Запуск клиента с портом: 7778
+2025-04-01 14:37:11.325 [main] INFO  org.wineeenottt.ClientApp - Конструктор класса ClientApp был загружен.
+2025-04-01 14:37:11.334 [main] INFO  org.wineeenottt.ClientConnection - Подключение установлено с сервером: localhost/127.0.0.1:7778
+2025-04-01 14:37:11.334 [main] INFO  org.wineeenottt.ClientApp - Подключение установлено с сервером: localhost/127.0.0.1:7778
+2025-04-01 14:37:11.335 [main] INFO  org.wineeenottt.ClientRequest - Канал ввода для клиента инициализирован
+2025-04-01 14:37:11.336 [main] INFO  org.wineeenottt.ClientApp - Клиент готов к чтению команд.
+2025-04-01 14:37:21.044 [main] INFO  org.wineeenottt.MainClient - Запуск клиента с портом: 7778
+2025-04-01 14:37:21.097 [main] INFO  org.wineeenottt.ClientApp - Конструктор класса ClientApp был загружен.
+2025-04-01 14:37:21.124 [main] INFO  org.wineeenottt.ClientConnection - Подключение установлено с сервером: localhost/127.0.0.1:7778
+2025-04-01 14:37:21.124 [main] INFO  org.wineeenottt.ClientApp - Подключение установлено с сервером: localhost/127.0.0.1:7778
+2025-04-01 14:37:21.169 [main] INFO  org.wineeenottt.ClientRequest - Канал ввода для клиента инициализирован
+2025-04-01 14:37:21.171 [main] INFO  org.wineeenottt.ClientApp - Клиент готов к чтению команд.
+2025-04-01 14:39:48.601 [main] INFO  org.wineeenottt.ClientResponse - CommandContainer успешно отправлен: org.wineeenottt.Commands.CommandContainer@647fd8ce, размер: 131 байт
+2025-04-01 14:39:53.619 [main] INFO  org.wineeenottt.ClientApp - Данные отправлены: org.wineeenottt.Commands.CommandContainer@647fd8ce
+2025-04-01 14:41:40.468 [main] ERROR org.wineeenottt.MainClient - Ошибка при запуске клиента: Ввод пустой или поток ввода был закрыт.
+2025-04-01 14:43:53.162 [main] INFO  org.wineeenottt.MainClient - Запуск клиента с портом: 7778
+2025-04-01 14:43:53.171 [main] INFO  org.wineeenottt.ClientApp - Конструктор класса ClientApp был загружен.
+2025-04-01 14:43:53.181 [main] ERROR org.wineeenottt.ClientConnection - Ошибка при установке соединения: Connection refused
+2025-04-01 14:43:53.181 [main] ERROR org.wineeenottt.ClientApp - Ошибка подключения (попытка 1/5): Connection refused
+2025-04-01 14:43:53.181 [main] WARN  org.wineeenottt.ClientApp - Повторить попытку? (y/n)
+2025-04-01 14:44:01.780 [main] ERROR org.wineeenottt.MainClient - Ошибка при запуске клиента: Ввод пустой или поток ввода был закрыт.
+2025-04-01 14:44:13.630 [main] INFO  org.wineeenottt.MainClient - Запуск клиента с портом: 7778
+2025-04-01 14:44:13.639 [main] INFO  org.wineeenottt.ClientApp - Конструктор класса ClientApp был загружен.
+2025-04-01 14:44:13.649 [main] INFO  org.wineeenottt.ClientConnection - Подключение установлено с сервером: localhost/127.0.0.1:7778
+2025-04-01 14:44:13.649 [main] INFO  org.wineeenottt.ClientApp - Подключение установлено с сервером: localhost/127.0.0.1:7778
+2025-04-01 14:44:13.650 [main] INFO  org.wineeenottt.ClientRequest - Канал ввода для клиента инициализирован
+2025-04-01 14:44:13.650 [main] INFO  org.wineeenottt.ClientApp - Клиент готов к чтению команд.
+2025-04-01 14:44:35.347 [main] INFO  org.wineeenottt.MainClient - Запуск клиента с портом: 7778
+2025-04-01 14:44:36.507 [main] INFO  org.wineeenottt.ClientApp - Конструктор класса ClientApp был загружен.
+2025-04-01 14:44:37.869 [main] INFO  org.wineeenottt.ClientConnection - Подключение установлено с сервером: localhost/127.0.0.1:7778
+2025-04-01 14:44:37.870 [main] INFO  org.wineeenottt.ClientApp - Подключение установлено с сервером: localhost/127.0.0.1:7778
+2025-04-01 14:44:37.877 [main] INFO  org.wineeenottt.ClientRequest - Канал ввода для клиента инициализирован
+2025-04-01 14:44:37.879 [main] INFO  org.wineeenottt.ClientApp - Клиент готов к чтению команд.
+2025-04-01 14:47:29.735 [main] INFO  org.wineeenottt.ClientResponse - CommandContainer успешно отправлен: org.wineeenottt.Commands.CommandContainer@647fd8ce, размер: 131 байт
+2025-04-01 14:48:11.836 [main] INFO  org.wineeenottt.ClientApp - Данные отправлены: org.wineeenottt.Commands.CommandContainer@647fd8ce
+2025-04-01 14:49:27.249 [main] DEBUG org.wineeenottt.ClientRequest - Получен размер данных: 1580 байт
+2025-04-01 14:50:00.336 [main] DEBUG org.wineeenottt.ClientRequest - Получено 1580 из 1580 байт
+2025-04-01 14:50:23.399 [main] INFO  org.wineeenottt.ClientRequest - Получен CommandContainer: org.wineeenottt.Commands.CommandContainer@460d0a57, размер: 1580 байт
+2025-04-01 14:50:35.600 [main] INFO  org.wineeenottt.ClientApp - Данные получены: org.wineeenottt.Commands.CommandContainer@460d0a57
+2025-04-01 15:45:33.860 [main] INFO  org.wineeenottt.MainClient - Запуск клиента с портом: 7778
+2025-04-01 15:45:33.871 [main] INFO  org.wineeenottt.ClientApp - Конструктор класса ClientApp был загружен.
+2025-04-01 15:45:33.888 [main] ERROR org.wineeenottt.ClientConnection - Ошибка при установке соединения: Connection refused
+2025-04-01 15:45:33.888 [main] ERROR org.wineeenottt.ClientApp - Ошибка подключения (попытка 1/5): Connection refused
+2025-04-01 15:45:33.888 [main] WARN  org.wineeenottt.ClientApp - Повторить попытку? (y/n)
+2025-04-01 15:45:54.927 [main] INFO  org.wineeenottt.MainClient - Запуск клиента с портом: 7778
+2025-04-01 15:45:54.936 [main] INFO  org.wineeenottt.ClientApp - Конструктор класса ClientApp был загружен.
+2025-04-01 15:45:54.946 [main] ERROR org.wineeenottt.ClientConnection - Ошибка при установке соединения: Connection refused
+2025-04-01 15:45:54.946 [main] ERROR org.wineeenottt.ClientApp - Ошибка подключения (попытка 1/5): Connection refused
+2025-04-01 15:45:54.946 [main] WARN  org.wineeenottt.ClientApp - Повторить попытку? (y/n)
+2025-04-01 15:46:03.810 [main] INFO  org.wineeenottt.ClientApp - Завершение работы клиента.
+2025-04-01 15:46:08.563 [main] INFO  org.wineeenottt.MainClient - Запуск клиента с портом: 7778
+2025-04-01 15:46:08.572 [main] INFO  org.wineeenottt.ClientApp - Конструктор класса ClientApp был загружен.
+2025-04-01 15:46:08.582 [main] ERROR org.wineeenottt.ClientConnection - Ошибка при установке соединения: Connection refused
+2025-04-01 15:46:08.582 [main] ERROR org.wineeenottt.ClientApp - Ошибка подключения (попытка 1/5): Connection refused
+2025-04-01 15:46:08.582 [main] WARN  org.wineeenottt.ClientApp - Повторить попытку? (y/n)
+2025-04-01 15:46:20.560 [main] ERROR org.wineeenottt.ClientConnection - Ошибка при установке соединения: Connection refused
+2025-04-01 15:46:20.563 [main] ERROR org.wineeenottt.ClientApp - Ошибка подключения (попытка 2/5): Connection refused
+2025-04-01 15:46:20.564 [main] WARN  org.wineeenottt.ClientApp - Повторить попытку? (y/n)
+2025-04-01 15:47:46.881 [main] INFO  org.wineeenottt.ClientConnection - Подключение установлено с сервером: localhost/127.0.0.1:7778
+2025-04-01 15:47:46.883 [main] INFO  org.wineeenottt.ClientApp - Подключение установлено с сервером: localhost/127.0.0.1:7778
+2025-04-01 15:47:46.887 [main] INFO  org.wineeenottt.ClientRequest - Канал ввода для клиента инициализирован
+2025-04-01 15:47:46.888 [main] INFO  org.wineeenottt.ClientApp - Клиент готов к чтению команд.
+2025-04-01 15:47:57.810 [main] WARN  o.wineeenottt.ClientCommandProcess - Команда не была исполнена клиентом: hghh\
+2025-04-01 15:48:11.887 [main] INFO  org.wineeenottt.ClientResponse - CommandContainer успешно отправлен: org.wineeenottt.Commands.CommandContainer@23f7d05d, размер: 131 байт
+2025-04-01 15:48:11.888 [main] INFO  org.wineeenottt.ClientApp - Данные отправлены: org.wineeenottt.Commands.CommandContainer@23f7d05d
+2025-04-01 15:48:11.993 [main] DEBUG org.wineeenottt.ClientRequest - Получен размер данных: 1580 байт
+2025-04-01 15:48:11.993 [main] DEBUG org.wineeenottt.ClientRequest - Получено 1580 из 1580 байт
+2025-04-01 15:48:11.998 [main] INFO  org.wineeenottt.ClientRequest - Получен CommandContainer: org.wineeenottt.Commands.CommandContainer@6ce139a4, размер: 1580 байт
+2025-04-01 15:48:11.998 [main] INFO  org.wineeenottt.ClientApp - Данные получены: org.wineeenottt.Commands.CommandContainer@6ce139a4
+2025-04-01 15:49:03.028 [main] INFO  org.wineeenottt.ClientResponse - CommandContainer успешно отправлен: org.wineeenottt.Commands.CommandContainer@6973bf95, размер: 131 байт
+2025-04-01 15:49:03.031 [main] INFO  org.wineeenottt.ClientApp - Данные отправлены: org.wineeenottt.Commands.CommandContainer@6973bf95
+2025-04-01 15:49:03.135 [main] DEBUG org.wineeenottt.ClientRequest - Получен размер данных: 360 байт
+2025-04-01 15:49:03.135 [main] DEBUG org.wineeenottt.ClientRequest - Получено 360 из 360 байт
+2025-04-01 15:49:03.136 [main] INFO  org.wineeenottt.ClientRequest - Получен CommandContainer: org.wineeenottt.Commands.CommandContainer@229d10bd, размер: 360 байт
+2025-04-01 15:49:03.136 [main] INFO  org.wineeenottt.ClientApp - Данные получены: org.wineeenottt.Commands.CommandContainer@229d10bd
+2025-04-01 15:50:10.269 [main] INFO  org.wineeenottt.ClientResponse - CommandContainer успешно отправлен: org.wineeenottt.Commands.CommandContainer@47542153, размер: 134 байт
+2025-04-01 15:50:10.273 [main] INFO  org.wineeenottt.ClientApp - Данные отправлены: org.wineeenottt.Commands.CommandContainer@47542153
+2025-04-01 15:50:10.378 [main] DEBUG org.wineeenottt.ClientRequest - Получен размер данных: 209 байт
+2025-04-01 15:50:10.379 [main] DEBUG org.wineeenottt.ClientRequest - Получено 209 из 209 байт
+2025-04-01 15:50:10.382 [main] INFO  org.wineeenottt.ClientRequest - Получен CommandContainer: org.wineeenottt.Commands.CommandContainer@7a4ccb53, размер: 209 байт
+2025-04-01 15:50:10.382 [main] INFO  org.wineeenottt.ClientApp - Данные получены: org.wineeenottt.Commands.CommandContainer@7a4ccb53
+2025-04-01 15:50:36.349 [main] INFO  org.wineeenottt.ClientResponse - CommandContainer успешно отправлен: org.wineeenottt.Commands.CommandContainer@309e345f, размер: 131 байт
+2025-04-01 15:50:36.351 [main] INFO  org.wineeenottt.ClientApp - Данные отправлены: org.wineeenottt.Commands.CommandContainer@309e345f
+2025-04-01 15:50:36.457 [main] DEBUG org.wineeenottt.ClientRequest - Получен размер данных: 360 байт
+2025-04-01 15:50:36.458 [main] DEBUG org.wineeenottt.ClientRequest - Получено 360 из 360 байт
+2025-04-01 15:50:36.459 [main] INFO  org.wineeenottt.ClientRequest - Получен CommandContainer: org.wineeenottt.Commands.CommandContainer@56a6d5a6, размер: 360 байт
+2025-04-01 15:50:36.460 [main] INFO  org.wineeenottt.ClientApp - Данные получены: org.wineeenottt.Commands.CommandContainer@56a6d5a6
+2025-04-01 15:53:07.425 [main] ERROR org.wineeenottt.MainClient - Ошибка при запуске клиента: Ввод пустой или поток ввода был закрыт.

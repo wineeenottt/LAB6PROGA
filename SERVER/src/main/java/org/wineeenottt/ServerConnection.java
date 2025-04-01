@@ -21,6 +21,7 @@ public class ServerConnection {
     public ServerConnection(int port) throws IOException {
         this.serverSocketChannel = ServerSocketChannel.open();
         this.serverSocketChannel.bind(new InetSocketAddress(port));
+
         rootLogger.info("Сервер запущен на порту: {}", port);
     }
 

@@ -50,7 +50,7 @@ public class ClientResponse {
             try (ByteArrayOutputStream b = new ByteArrayOutputStream(); //поток для записи байтов в масссив
                  ObjectOutputStream o = new ObjectOutputStream(b)) { //объект сериализации
                 o.writeObject(command); //сериализуем
-                o.flush();
+                o.flush();//гарантируем
                 serializedData = b.toByteArray(); //массив байтов
             }
 
